@@ -4,6 +4,9 @@ The idea behind this program is to have a machine learning model which is able t
 
 ![dupontel_example](readme_images/Albert_Dupontel.jpg)
 
+In fact, a lot of directors can be guessed just by looking at a single shot as they work on their aesthetic with recognisable features : colors, contrasts, aspect ratios, perspectives, and even shot composition or recurent actors. One can think of Wes Anderson, Jean-Pierre Jeunet, Quentin Tarantino, Yorgos Lanthimos, Woody Allen, and many many many others... 
+Maybe a machine learning model can identify those features in a single screenshot, and thus predit who the director of the movie is.
+
 This repository contains:
 * a model_builder.py file which defines some useful classes for the training script,
 * a data_extractor.py file which defines a class to help to user extract screenshots from a video,
@@ -19,7 +22,8 @@ $ pip install -r requirements.txt
 ## Training process
 
 In order to train the model, one must have...some data !
-It is the biggest challenge of this project : to gather enough data to determine who directed which movie.
+It must the biggest challenge of this project : to gather enough data to determine who directed which movie. As each movie is unique even for a same director, and there are a lot of characteristics to identify in order to guess who the director is, the best way of gathering data seems to be the generation of lots of random screenshots from one movie, for a lots of movies.
+
 *For the moment, I decided to fine-tune the ResNet model, as it is pretty efficient on image classification problems and requires less data than a full training.*
 
 ### Data organisation
