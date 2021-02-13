@@ -1,10 +1,9 @@
 # data informations
 IMG_SIZE = (224,224)
 TRN_DIR = './data_trn/'
-SRC_DIR = './data_src/'
 
 # training parameters
-TEST_SIZE = 0.15
+TEST_SIZE = 0.10
 LEARNING_RATE = 1e-4
-EPOCHS = 100
+EPOCHS = 200
 BATCH_SIZE = 32
