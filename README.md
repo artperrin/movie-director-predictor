@@ -12,12 +12,27 @@ This repository contains:
 * a data_extractor.py file which defines a class to help to user extract screenshots from a video,
 * a fine_tune_resnet.py file to train the last layer of resnet (all the other weights are frozen) to classify our directors,
 * a director_guesser.py file to apply our model to images,
+* a data_explorer.ipynb notebook to plot informations about the user's training dataset,
 * a config.py file to store needed data.
 
-To use this program, the user must install the needed libraries with the command line:
+To use this program, the user must firstly install the needed libraries with the command line:
 ```sh
 $ pip install -r requirements.txt
 ```
+
+## First tests
+
+I managed to generate random screenshots from movies to fill my training dataset, using the data_extractor.py script, which is to be adapted for the user's movie storage. Here are some informations about my dataset, plotted with the data_explorer.ipynb notebook:
+
+![training dataset](readme_images/dataset.png)
+
+It is quite balanced (except for Albert Dupontel, sorry...) but there are still not enough data to train (a little 3024 files) and after 200 Epochs of a first training, I get the following results:
+
+<p align="center">
+<img width=350 src="readme_images/class_report.PNG">
+</p>
+
+Moreover, if the number of files for each director seems balanced, the number of movies for each director is not: I may have had to generate fifty screenshots from two films directed by A and ten screenshots from ten films directed by B...
 
 ## Training process
 
