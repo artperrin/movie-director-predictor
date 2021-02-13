@@ -3,6 +3,7 @@ import cv2
 import config
 import logging
 import random
+import time
 
 logging.getLogger().setLevel(logging.INFO)
 
@@ -73,10 +74,11 @@ class Movie:
                 logging.debug(f'New screenshot saved in the already existing directory : {folder}.')
 
 if __name__ == "__main__":
+    start = time.time()
     # my library is luckily organized by director
-    src_dir = 'E:\\Films\\Yorgos Lanthimos\\'
+    src_dir = 'E:\\Films\\Edgar Wright\\'
     # director's name to create folder
-    real = 'lanthimos'
+    real = 'wright'
 
     src_dir = os.path.normpath(src_dir)
 
@@ -107,4 +109,4 @@ if __name__ == "__main__":
             print(f"Generated {count} screenshots out of {len(filenames)*ScreenShotNB}...", end="\r", flush=True)
     print('', end='\n')
     
-    logging.info(f"Successfuly wrote {count} screenshots !")
+    logging.info(f"Successfuly wrote {count} screenshots within {round(time.time()-start)} seconds !")
