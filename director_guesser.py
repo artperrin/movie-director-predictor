@@ -61,6 +61,7 @@ proba = model.predict(image)
 label = lb.classes_[np.argmax(proba, axis=1)]
 
 # show the result
+print(f'a movie directed by {label[0]}.')
 logging.info(f"End of the prediction within {round(time.time()-start, 2)} seconds.")
 X, Y = config.IMG_SIZE
 X, Y = int(X/2), int(Y/2)

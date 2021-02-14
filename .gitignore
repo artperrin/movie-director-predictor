@@ -3,3 +3,4 @@ venv
 __pycache__
 data_trn
 data_src
+test
